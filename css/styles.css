@@ -1,0 +1,105 @@
+/* HTML tag selector */
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #f7f7f7;
+}
+
+label {
+    font-size: 0.8rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer{
+    background-color: black;
+    padding-bottom: 2rem;    
+    color: grey;
+    font-size: 0.5rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+/* class selector */
+.login-page-head {
+    margin: 3rem auto 0;
+    text-align: center;
+}
+
+.login-page-body {
+    margin: 1rem auto;
+    width: 25rem;
+    background-color: white;
+    padding: 2rem 1rem;
+    border: 1px solid;
+    border-radius: 1%;
+    border-color: #e6e6e6;
+}
+
+
+.logo-md {
+    width: 3rem;
+}
+
+.logo-sm {
+    width: 2rem;
+}
+
+.text-small {
+    font-size: 0.7rem;
+}
+
+.text-white {
+    color: white;
+}
+
+.unread {
+    font-weight: 800;
+    color: blue;
+    font-size: 0.8rem;
+}
+
+.regis-form{
+    margin: 2rem auto;  
+    width: 30rem;
+}
+
+/* id selector */
+#sidebar a {
+    color: white;
+}
+
+#sidebar a:hover {
+    color: gray;
+}
+
+.content-body {
+    border: 1px solid grey;
+    background-color: white;
+    padding-bottom: 30px;
+}
+
+.landing-page-banner .banner-image {
+    width: 100%;    
+}
+
+
+/* Media query */
+
+@media only screen and (max-width: 992px) {
+    .navbar-brand {
+        margin: auto;
+    }
+}
+
+/* bootstrap override */
+.navbar .nav-item a:hover {
+    background-color: gray;
+}
+
+/* fontawesome override */
+.fa-solid {
+    margin-right: 0.3rem;
+}
