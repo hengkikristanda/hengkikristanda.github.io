@@ -1,8 +1,12 @@
 /* HTML tag selector */
 body {
     margin: 0;
+    /* font-family: 'Times New Roman', Times, serif; */
     font-family: 'Ubuntu', sans-serif;
     background-color: #f7f7f7;
+    /* font-size: 12px; */
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
 label {
@@ -13,9 +17,9 @@ a {
     text-decoration: none;
 }
 
-footer{
+footer {
     background-color: black;
-    padding-bottom: 2rem;    
+    padding-bottom: 2rem;
     color: grey;
     font-size: 0.5rem;
     text-align: center;
@@ -38,6 +42,9 @@ footer{
     border-color: #e6e6e6;
 }
 
+.logo-lg {
+    width: 5rem;
+}
 
 .logo-md {
     width: 3rem;
@@ -51,9 +58,23 @@ footer{
     font-size: 0.7rem;
 }
 
+.text-md {
+    font-size: 0.8rem;
+}
+
 .text-white {
     color: white;
 }
+
+
+
+.main-stage {}
+
+.card-subtitle{
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
 
 .unread {
     font-weight: 800;
@@ -61,8 +82,8 @@ footer{
     font-size: 0.8rem;
 }
 
-.regis-form{
-    margin: 2rem auto;  
+.regis-form {
+    margin: 2rem auto;
     width: 30rem;
 }
 
@@ -82,8 +103,23 @@ footer{
 }
 
 .landing-page-banner .banner-image {
-    width: 100%;    
+    width: 100%;
 }
+
+
+.wrapped-show {
+    display: none;
+}
+
+
+h1.money {
+    font-size: 3rem;
+}
+
+.money:hover {
+    cursor: pointer;
+}
+
 
 
 /* Media query */
@@ -91,6 +127,20 @@ footer{
 @media only screen and (max-width: 992px) {
     .navbar-brand {
         margin: auto;
+    }
+
+    .wrapped-center {
+        text-align: center;
+        margin: 0.5rem auto;
+        display: block;
+    }
+
+    .wrapper-hide {
+        display: none;
+    }
+
+    .wrapped-show {
+        display: inline;
     }
 }
 
