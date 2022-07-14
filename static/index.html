@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="shortcut icon" href="img/icons/exchange-money-svgrepo-com.svg">
+        <title>CRM - Dashboard Demo</title>
+        <link href="css/app.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav id="sidebar" class="sidebar js-sidebar">
+                <div class="sidebar-content js-simplebar">
+                    <a class="sidebar-brand" href="index.html">
+                        <img
+                            src="img/icons/exchange-money-svgrepo-com.svg"
+                            alt=""
+                            width="30"
+                            class="me-2"
+                        >
+                        <span class="align-middle">My-Broker</span>
+                    </a>
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-header">
+                            Pages
+                        </li>
+                        <li class="sidebar-item active">
+                            <a class="sidebar-link" href="index.html">
+                                <i class="align-middle" data-feather="sliders"></i>
+                                <span class="align-middle">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="charts-chartjs.html">
+                                <i class="align-middle" data-feather="pie-chart"></i>
+                                <span class="align-middle">Sample</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-header">
+                            Marketing
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="pages-clients.html">
+                                <i class="align-middle" data-feather="users"></i>
+                                <span class="align-middle">Clients</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="pages-ib.html">
+                                <i class="align-middle" data-feather="user-plus"></i>
+                                <span class="align-middle">IB / Partners</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="pages-lp.html">
+                                <i class="align-middle" data-feather="trello"></i>
+                                <span class="align-middle">Landing Pages</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="#">
+                                <i class="align-middle" data-feather="link"></i>
+                                <span class="align-middle">Link Generator</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="#">
+                                <i class="align-middle" data-feather="slack"></i>
+                                <span class="align-middle">Branding Guidelines</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="#">
+                                <i class="align-middle" data-feather="globe"></i>
+                                <span class="align-middle">Promotion</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="#">
+                                <i class="align-middle" data-feather="copy"></i>
+                                <span class="align-middle">Copy Trade</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="#">
+                                <i class="align-middle" data-feather="bar-chart"></i>
+                                <span class="align-middle">Signal Provider</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-header">
+                            Tools & Components
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="pages-message.html">
+                                <i class="align-middle" data-feather="mail"></i>
+                                <span class="align-middle">Messages</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="pages-notif.html">
+                                <i class="align-middle" data-feather="bell"></i>
+                                <span class="align-middle">Notifications</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-header">
+                            Profile and Settings
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="pages-profile.html">
+                                <i class="align-middle" data-feather="user"></i>
+                                <span class="align-middle">Profile</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="#">
+                                <i class="align-middle" data-feather="settings"></i>
+                                <span class="align-middle">Settings & Privacy</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="#">
+                                <i class="align-middle" data-feather="help-circle"></i>
+                                <span class="align-middle">Help Center</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="main">
+                <nav class="navbar navbar-expand navbar-light navbar-bg">
+                    <a class="sidebar-toggle js-sidebar-toggle">
+                        <i class="hamburger align-self-center"></i>
+                    </a>
+                    <div class="navbar-collapse collapse">
+                        <ul class="navbar-nav navbar-align">
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-icon dropdown-toggle"
+                                    href="#"
+                                    id="alertsDropdown"
+                                    data-bs-toggle="dropdown"
+                                >
+                                    <div class="position-relative">
+                                        <i class="align-middle" data-feather="bell"></i>
+                                        <span class="indicator">4</span>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+                                    <div class="dropdown-menu-header">
+                                        4 New Notifications
+                                    </div>
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item">
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-2">
+                                                    <i class="text-danger" data-feather="alert-circle"></i>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="text-dark">Update completed</div>
+                                                    <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
+                                                    <div class="text-muted small mt-1">30m ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-2">
+                                                    <i class="text-warning" data-feather="bell"></i>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="text-dark">Lorem ipsum</div>
+                                                    <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
+                                                    <div class="text-muted small mt-1">2h ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-2">
+                                                    <i class="text-primary" data-feather="home"></i>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="text-dark">Login from 192.186.1.8</div>
+                                                    <div class="text-muted small mt-1">5h ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-2">
+                                                    <i class="text-success" data-feather="user-plus"></i>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="text-dark">New connection</div>
+                                                    <div class="text-muted small mt-1">Christina accepted your request.</div>
+                                                    <div class="text-muted small mt-1">14h ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-menu-footer">
+                                        <a href="pages-notif.html" class="text-muted">Show all notifications</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-icon dropdown-toggle"
+                                    href="#"
+                                    id="messagesDropdown"
+                                    data-bs-toggle="dropdown"
+                                >
+                                    <div class="position-relative">
+                                        <i class="align-middle" data-feather="message-square"></i>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
+                                    <div class="dropdown-menu-header">
+                                        <div class="position-relative">
+                                            4 New Messages
+                                        </div>
+                                    </div>
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item">
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-2">
+                                                    <img src="img/avatars/feli-ramsanjami-agung.jpg" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+                                                </div>
+                                                <div class="col-10 ps-2">
+                                                    <div class="text-dark">Feli Ramsanjami Agung</div>
+                                                    <div class="text-muted small mt-1">Good question - I am still trying to figure that out!.</div>
+                                                    <div class="text-muted small mt-1">15m ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-2">
+                                                    <img src="img/avatars/jeremy-budiman.jpg" class="avatar img-fluid rounded-circle" alt="William Harris">
+                                                </div>
+                                                <div class="col-10 ps-2">
+                                                    <div class="text-dark">Jeremy Budiman</div>
+                                                    <div class="text-muted small mt-1">My life is a crazy explosion of shapes and colors - Creativity.</div>
+                                                    <div class="text-muted small mt-1">2h ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-2">
+                                                    <img src="img/avatars/catherina-ruth-setiawan.jpg" class="avatar img-fluid rounded-circle" alt="Christina Mason">
+                                                </div>
+                                                <div class="col-10 ps-2">
+                                                    <div class="text-dark">Catherina R Setiawan</div>
+                                                    <div class="text-muted small mt-1">Every day - if walking through the shops count as working out!.</div>
+                                                    <div class="text-muted small mt-1">4h ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-2">
+                                                    <img src="img/avatars/karen-widjaja.jpg" class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
+                                                </div>
+                                                <div class="col-10 ps-2">
+                                                    <div class="text-dark">Karen Widjaja</div>
+                                                    <div class="text-muted small mt-1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</div>
+                                                    <div class="text-muted small mt-1">5h ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-menu-footer">
+                                        <a href="pages-message.html" class="text-muted">Show all messages</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                                    <i class="align-middle" data-feather="settings"></i>
+                                </a>
+                                <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                                    <img src="img/avatars/user-profile-svgrepo-com.svg" class="avatar img-fluid rounded me-1" alt="Charles Hall">
+                                    <span class="text-dark">User Admin</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a class="dropdown-item" href="pages-profile.html">
+                                        <i class="align-middle me-1" data-feather="user"></i>
+                                        Profile
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="align-middle me-1" data-feather="settings"></i>
+                                        Settings & Privacy
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="align-middle me-1" data-feather="help-circle"></i>
+                                        Help Center
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="pages-sign-in.html">Log out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <main class="content">
+                    <div class="container-fluid p-0">
+                        <h1 class="h3 mb-3">
+                            <strong>Analytics</strong>
+                            Dashboard
+                        </h1>
+                        <div class="row">
+                            <div class="col-xl-6 col-xxl-5 d-flex">
+                                <div class="w-100">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col mt-0">
+                                                            <h5 class="card-title">Margin (YTD)</h5>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <div class="stat text-primary">
+                                                                <i class="bi bi-currency-dollar"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h1 class="mt-1 mb-3">$500.382</h1>
+                                                    <div class="mb-0">
+                                                        <span class="text-success">
+                                                            <i class="mdi mdi-arrow-bottom-right"></i>
+                                                            +9.65%
+                                                        </span>
+                                                        <span class="text-muted">Year on year</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col mt-0">
+                                                            <h5 class="card-title">Visitors</h5>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <div class="stat text-primary">
+                                                                <i class="bi bi-people"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h1 class="mt-1 mb-3">14.212</h1>
+                                                    <div class="mb-0">
+                                                        <span class="text-success">
+                                                            <i class="mdi mdi-arrow-bottom-right"></i>
+                                                            5.25%
+                                                        </span>
+                                                        <span class="text-muted">Since last week</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col mt-0">
+                                                            <h5 class="card-title">Earnings</h5>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <div class="stat text-primary">
+                                                                <i class="bi bi-cash-coin"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h1 class="mt-1 mb-3">$21.300</h1>
+                                                    <div class="mb-0">
+                                                        <span class="text-success">
+                                                            <i class="mdi mdi-arrow-bottom-right"></i>
+                                                            6.65%
+                                                        </span>
+                                                        <span class="text-muted">Since last week</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col mt-0">
+                                                            <h5 class="card-title">New Clients</h5>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <div class="stat text-primary">
+                                                                <i class="bi bi-person-check"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h1 class="mt-1 mb-3">640</h1>
+                                                    <div class="mb-0">
+                                                        <span class="text-success">
+                                                            <i class="mdi mdi-arrow-bottom-right"></i>
+                                                            +2.25%
+                                                        </span>
+                                                        <span class="text-muted">Since last week</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-xxl-7">
+                                <div class="card flex-fill w-100">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">Year to Year Gross Income</h5>
+                                    </div>
+                                    <div class="card-body py-3">
+                                        <div class="chart chart-sm">
+                                            <canvas id="chartjs-dashboard-line"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-xl-3 d-flex order-2 order-xxl-3">
+                                <div class="card flex-fill w-100">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">Top 3 Contributors by Region</h5>
+                                    </div>
+                                    <div class="card-body d-flex">
+                                        <div class="align-self-center w-100">
+                                            <div class="py-3">
+                                                <div class="chart chart-xs">
+                                                    <canvas id="chartjs-dashboard-pie"></canvas>
+                                                </div>
+                                            </div>
+                                            <table class="table mb-0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Indonesia</td>
+                                                        <td class="text-end">4306</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Tokyo</td>
+                                                        <td class="text-end">3801</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Melbourne</td>
+                                                        <td class="text-end">1689</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-xl-9 d-flex order-3 order-xxl-2">
+                                <div class="card flex-fill w-100">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">Regional Gross Margin Contribution</h5>
+                                    </div>
+                                    <div class="card-body px-4">
+                                        <div id="world_map" style="height:350px;"></div>
+                                        <table class="table table-hover table-borderless mt-5">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col">Country</th>
+                                                    <th scope="col" class="text-center">Clients</th>
+                                                    <th scope="col" class="text-end">Percentage</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <img src="img/flags/indonesia.png" width="20" class="me-2">
+                                                        Indonesia
+                                                    </td>
+                                                    <td class="text-end">100</td>
+                                                    <td class="text-end">10%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="img/flags/japan.png" width="20" class="me-2">
+                                                        Japan
+                                                    </td>
+                                                    <td class="text-end">200</td>
+                                                    <td class="text-end">20%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="img/flags/australia.png" width="20" class="me-2">
+                                                        Australia
+                                                    </td>
+                                                    <td class="text-end">300</td>
+                                                    <td class="text-end">30%</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr class="text-end">
+                                                    <td colspan="3" class="py-0">
+                                                        <hr>
+                                                        1 to 5 of 5 -
+                                                        <a href="#">View All</a>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-8 col-xxl-9 d-flex">
+                                <div class="card flex-fill">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">Top Profit-Contributors</h5>
+                                    </div>
+                                    <table class="table table-hover my-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th class="d-none d-xl-table-cell">Region</th>
+                                                <th class="d-none d-xl-table-cell">Position</th>
+                                                <th class="d-none d-md-table-cell">Contributions</th>
+                                                <th class="d-none d-md-table-cell">Growth (YoY)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Vanessa Tucker</td>
+                                                <td class="d-none d-xl-table-cell">Indonesia</td>
+                                                <td class="d-none d-xl-table-cell">Lead Sales</td>
+                                                <td class="d-none d-md-table-cell">$21.103</td>
+                                                <td class="d-none d-md-table-cell">13.5%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>William Harris</td>
+                                                <td class="d-none d-xl-table-cell">Hongkong</td>
+                                                <td class="d-none d-xl-table-cell">Sales</td>
+                                                <td class="d-none d-md-table-cell">$20.103</td>
+                                                <td class="d-none d-md-table-cell">15.5%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sharon Lessman</td>
+                                                <td class="d-none d-xl-table-cell">Singapore</td>
+                                                <td class="d-none d-xl-table-cell">Marketing Manager</td>
+                                                <td class="d-none d-md-table-cell">$19.233</td>
+                                                <td class="d-none d-md-table-cell">21.5%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>William Nitro</td>
+                                                <td class="d-none d-xl-table-cell">Indonesia</td>
+                                                <td class="d-none d-xl-table-cell">Marketing Manager</td>
+                                                <td class="d-none d-md-table-cell">$19.303</td>
+                                                <td class="d-none d-md-table-cell">23.5%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Harris Jeremy</td>
+                                                <td class="d-none d-xl-table-cell">Australia</td>
+                                                <td class="d-none d-xl-table-cell">Lead Sales</td>
+                                                <td class="d-none d-md-table-cell">$14.931</td>
+                                                <td class="d-none d-md-table-cell">9.5%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Darby Ron</td>
+                                                <td class="d-none d-xl-table-cell">Spain</td>
+                                                <td class="d-none d-xl-table-cell">Marketing Staff</td>
+                                                <td class="d-none d-md-table-cell">$11.992</td>
+                                                <td class="d-none d-md-table-cell">5.5%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jamie Romeo</td>
+                                                <td class="d-none d-xl-table-cell">Indonesia</td>
+                                                <td class="d-none d-xl-table-cell">Lead Sales</td>
+                                                <td class="d-none d-md-table-cell">$21.103</td>
+                                                <td class="d-none d-md-table-cell">13.5%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Peter Wombat</td>
+                                                <td class="d-none d-xl-table-cell">Argentina</td>
+                                                <td class="d-none d-xl-table-cell">Lead Sales</td>
+                                                <td class="d-none d-md-table-cell">$4.103</td>
+                                                <td class="d-none d-md-table-cell">33.5%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-xxl-3 d-flex">
+                                <div class="card flex-fill w-100">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">Monthly New Clients</h5>
+                                    </div>
+                                    <div class="card-body d-flex w-100">
+                                        <div class="align-self-center chart chart-lg">
+                                            <canvas id="chartjs-dashboard-bar"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="js/app.js"></script>
+        <!-- Fontawesome CDN -->
+        <script src="https://kit.fontawesome.com/996b4fade0.js" crossorigin="anonymous"></script>
+        <script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
+			var gradient = ctx.createLinearGradient(0, 0, 0, 225);
+			gradient.addColorStop(0, "rgba(215, 227, 244, 1)");
+			gradient.addColorStop(1, "rgba(215, 227, 244, 0)");
+			// Line chart
+			new Chart(document.getElementById("chartjs-dashboard-line"), {
+				type: "line",
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "Margin ($)",
+						fill: true,
+						backgroundColor: gradient,
+						borderColor: window.theme.primary,
+						data: [
+							211500,
+							156200,
+							158400,
+							189020,
+							158700,
+							192300,
+							256600,
+							244800,
+							280500,
+							343800,
+							291700,
+							332070
+						]
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					tooltips: {
+						intersect: false
+					},
+					hover: {
+						intersect: true
+					},
+					plugins: {
+						filler: {
+							propagate: false
+						}
+					},
+					scales: {
+						xAxes: [{
+							reverse: true,
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}],
+						yAxes: [{
+							ticks: {
+								stepSize: 100000
+							},
+							display: true,
+							borderDash: [3, 3],
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}]
+					}
+				}
+			});
+		});
+        </script>
+        <script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Pie chart
+			new Chart(document.getElementById("chartjs-dashboard-pie"), {
+				type: "pie",
+				data: {
+					labels: ["Indonesia", "Tokyo", "Melbourne"],
+					datasets: [{
+						data: [4306, 3801, 1689],
+						backgroundColor: [							
+							window.theme.warning,
+                            window.theme.primary,
+							window.theme.danger
+						],
+						borderWidth: 5
+					}]
+				},
+				options: {
+					responsive: !window.MSInputMethodContext,
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					cutoutPercentage: 75
+				}
+			});
+		});
+        </script>
+        <script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Bar chart
+			new Chart(document.getElementById("chartjs-dashboard-bar"), {
+				type: "bar",
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "This year",
+						backgroundColor: window.theme.primary,
+						borderColor: window.theme.primary,
+						hoverBackgroundColor: window.theme.primary,
+						hoverBorderColor: window.theme.primary,
+						data: [540, 670, 410, 550, 620, 450, 550, 730, 600, 760, 480, 790],
+						barPercentage: .75,
+						categoryPercentage: .5
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					scales: {
+						yAxes: [{
+							gridLines: {
+								display: false
+							},
+							stacked: false,
+							ticks: {
+								stepSize: 100
+							}
+						}],
+						xAxes: [{
+							stacked: false,
+							gridLines: {
+								color: "transparent"
+							}
+						}]
+					}
+				}
+			});
+		});
+        </script>
+        <script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var markers = [{
+					coords: [31.230391, 121.473701],
+					name: "Shanghai: 13%",                 
+				},
+				{
+					coords: [28.704060, 77.102493],
+					name: "Delhi: 2%"
+				},
+				{
+					coords: [6.524379, 3.379206],
+					name: "Lagos: 1%"
+				},
+				{
+					coords: [35.689487, 139.691711],
+					name: "Tokyo: 9%"
+				},
+				{
+					coords: [23.129110, 113.264381],
+					name: "Guangzhou: 15%"
+				},
+				{
+					coords: [40.7127837, -74.0059413],
+					name: "New York: 35%"
+				},
+				{
+					coords: [34.052235, -118.243683],
+					name: "Los Angeles: 22%"
+				},
+				{
+					coords: [41.878113, -87.629799],
+					name: "Chicago 7%"
+				},
+				{
+					coords: [51.507351, -0.127758],
+					name: "London 32%"
+				},
+				{
+					coords: [40.416775, -3.703790],
+					name: "Madrid 11%"
+				}
+			];
+			var map = new jsVectorMap({
+				map: "world",
+				selector: "#world_map",
+				zoomButtons: true,
+				markers: markers,
+				markerStyle: {
+					initial: {
+						r: 9,
+						strokeWidth: 7,
+						stokeOpacity: .4,
+						fill: window.theme.primary
+					},
+					hover: {
+						fill: window.theme.primary,
+						stroke: window.theme.primary
+					}
+				},
+				zoomOnScroll: false
+			});
+			window.addEventListener("resize", () => {
+				map.updateSize();
+			});
+		});
+        </script>
+    </body>
+</html>
